@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A closer look at workflowsim-research: scientific workflow simulation, explicit experiment configuration, and inspectable, replayable results.">
+  <meta name="theme-color" content="#18304a">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Jayce">
+  <meta property="og:title" content="WorkflowSim Research — Jayce">
+  <meta property="og:description" content="Scientific workflow scheduling experiments, from declared assumptions to inspectable results.">
+  <meta property="og:url" content="https://yixin0724.github.io/workflowsim-research.html">
+  <link rel="canonical" href="https://yixin0724.github.io/workflowsim-research.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <title>WorkflowSim Research — Jayce</title>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="brand" href="./" aria-label="Jayce, home">Jayce<span class="brand-dot" aria-hidden="true">.</span></a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html#research">Research</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#about">About</a>
+        <a href="https://github.com/yixin0724">GitHub <span aria-hidden="true">↗</span></a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <header class="project-hero">
+        <a class="back-link" href="index.html#projects"><span aria-hidden="true">←</span> All projects</a>
+        <p class="eyebrow">workflowsim-research · Research software · Java</p>
+        <h1>Scientific workflow<br>simulation.</h1>
+        <p class="project-lead">From declared assumptions to inspectable results.</p>
+        <p class="project-intro">A discrete-event simulation environment for studying how scientific workflows are scheduled. Built on the WorkflowSim and CloudSim codebase, the project connects workflow inputs, resource models, scheduling decisions, and experiment evidence.</p>
+        <div class="hero-actions">
+          <a class="button" href="https://github.com/yixin0724/workflowsim-research">View the repository <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="#experiment-flow">Follow an experiment <span aria-hidden="true">↓</span></a>
+        </div>
+      </header>
+
+      <div class="project-layout">
+        <aside class="project-toc" aria-label="On this page">
+          <p class="eyebrow">On this page</p>
+          <nav>
+            <a href="#why">The problem</a>
+            <a href="#approach">The approach</a>
+            <a href="#experiment-flow">Experiment flow</a>
+            <a href="#scope">Scope</a>
+            <a href="#resources">Resources</a>
+          </nav>
+        </aside>
+
+        <div class="project-body">
+          <section class="article-section" id="why" aria-labelledby="why-title">
+            <h2 id="why-title">The problem</h2>
+            <p>A scheduling result depends on more than the scheduling algorithm. Task dependencies, data availability, resource capacities, and the rules of the simulation all affect what can happen and when.</p>
+            <p>Studying those decisions requires an explicit experiment setup and a way to trace results back to that setup. This project brings the model, execution, and evidence together so that a comparison can be understood in context.</p>
+          </section>
+
+          <section class="article-section" id="approach" aria-labelledby="approach-title">
+            <h2 id="approach-title">The approach</h2>
+            <div class="feature-list">
+              <article>
+                <h3>Declare the experiment.</h3>
+                <p>Workflow inputs, platform settings, and scheduling choices are provided explicitly. Validation checks inputs and supported combinations before a simulation runs.</p>
+              </article>
+              <article>
+                <h3>Keep computation and data connected.</h3>
+                <p>The model covers task dependencies, compute resources, storage, and data transfer. The supported combinations are documented so each experiment has a defined scope.</p>
+              </article>
+              <article>
+                <h3>Keep the evidence with the result.</h3>
+                <p>Each run has a dedicated output directory. Manifests, metrics, event records, and offline reports help inspect what happened; replay checks compare recorded results within the declared configuration.</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="article-section" id="experiment-flow" aria-labelledby="flow-title">
+            <h2 id="flow-title">Follow an experiment</h2>
+            <p>The experiment workbench connects configuration, execution, and reporting. A run follows this sequence:</p>
+            <ol class="experiment-flow">
+              <li>
+                <span class="flow-number" aria-hidden="true">1</span>
+                <h3>Declare</h3>
+                <p>Choose a workflow, platform, and supported scheduling configuration.</p>
+              </li>
+              <li>
+                <span class="flow-number" aria-hidden="true">2</span>
+                <h3>Validate</h3>
+                <p>Check inputs, parameters, and model compatibility.</p>
+              </li>
+              <li>
+                <span class="flow-number" aria-hidden="true">3</span>
+                <h3>Simulate</h3>
+                <p>Execute scheduling decisions, task events, and data movement.</p>
+              </li>
+              <li>
+                <span class="flow-number" aria-hidden="true">4</span>
+                <h3>Inspect</h3>
+                <p>Read the report and examine the evidence behind the result.</p>
+              </li>
+            </ol>
+            <p>The offline report includes scheme comparisons, task timelines, waiting time, and resource utilization. The repository’s online scheduling example is one starting point for exploring this process.</p>
+            <a class="text-link" href="https://github.com/yixin0724/workflowsim-research/blob/main/experiments/configs/online-comparison.json">View the example configuration <span aria-hidden="true">↗</span></a>
+          </section>
+
+          <section class="article-section" id="scope" aria-labelledby="scope-title">
+            <h2 id="scope-title">Scope matters.</h2>
+            <p>Results describe the declared simulation model and support controlled comparisons under those assumptions. Real infrastructure measurements require their own validation.</p>
+            <p>The repository provides the simulation environment and policy interfaces, including state, action, and reward contracts. Deep-learning trainers remain external to this project.</p>
+            <p>Supported combinations and evidence guarantees are documented in the repository. Those contracts provide the context for interpreting a result.</p>
+            <a class="text-link" href="https://github.com/yixin0724/workflowsim-research/blob/main/docs/experiments/REPRODUCIBILITY.md">Read the reproducibility contract <span class="link-note">(Chinese)</span> <span aria-hidden="true">↗</span></a>
+          </section>
+
+          <section class="article-section" id="resources" aria-labelledby="resources-title">
+            <h2 id="resources-title">Explore the project</h2>
+            <div class="resource-list">
+              <a href="https://github.com/yixin0724/workflowsim-research">
+                <span><strong>Source &amp; overview</strong><small>The current code, capabilities, and project documentation.</small></span>
+                <span aria-hidden="true">↗</span>
+              </a>
+              <a href="https://github.com/yixin0724/workflowsim-research/blob/main/docs/getting-started/WORKBENCH.md">
+                <span><strong>Workbench guide <span class="link-note">(Chinese)</span></strong><small>Run an experiment from configuration and read its report.</small></span>
+                <span aria-hidden="true">↗</span>
+              </a>
+              <a href="https://github.com/yixin0724/workflowsim-research/blob/main/docs/advanced/DATAFLOW_CAPABILITY_MATRIX.md">
+                <span><strong>Model capability matrix <span class="link-note">(Chinese)</span></strong><small>Check which dataflow and scheduling combinations are supported.</small></span>
+                <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p><a href="./">Jayce</a> <span aria-hidden="true">·</span> Research, tools, and ideas.</p>
+      <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
+    </footer>
+  </div>
+</body>
+</html>

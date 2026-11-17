@@ -1,102 +1,139 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description"
-        content="Jayce 的个人主页：软件工程硕士生，研究深度强化学习与工作流调度，关注 AI Agent 应用开发。">
-  <title>Jayce | 个人主页</title>
-
-  <style>
-    body {
-      max-width: 760px;
-      margin: 56px auto;
-      padding: 0 24px;
-      font-family: system-ui, -apple-system, "Microsoft YaHei", sans-serif;
-      line-height: 1.9;
-      color: #24302b;
-      background: #faf9f6;
-    }
-
-    h1 {
-      font-size: clamp(32px, 7vw, 44px);
-      line-height: 1.3;
-      margin-bottom: 12px;
-    }
-
-    h2 {
-      font-size: 22px;
-      margin-top: 36px;
-    }
-
-    a {
-      color: #17664a;
-      text-underline-offset: 4px;
-    }
-
-    .subtitle {
-      color: #59645e;
-    }
-
-    footer {
-      margin-top: 56px;
-      padding-top: 20px;
-      border-top: 1px solid #dedfd8;
-      color: #666;
-      font-size: 14px;
-    }
-  </style>
+  <meta name="description" content="Jayce studies workflow scheduling with deep reinforcement learning and builds tools for reproducible research and AI agent applications.">
+  <meta name="theme-color" content="#18304a">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Jayce">
+  <meta property="og:title" content="Jayce — Research, tools, and ideas">
+  <meta property="og:description" content="A personal home for workflow scheduling research, reproducible experiments, and AI agent applications.">
+  <meta property="og:url" content="https://yixin0724.github.io/">
+  <link rel="canonical" href="https://yixin0724.github.io/">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <title>Jayce — Research, tools, and ideas</title>
 </head>
-
-<body>
-  <main>
-    <header>
-      <h1>你好，我是 Jayce</h1>
-      <p class="subtitle">软件工程硕士生 · 工作流调度 · AI Agent 应用开发</p>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="brand" href="./" aria-label="Jayce, home">Jayce<span class="brand-dot" aria-hidden="true">.</span></a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#research">Research</a>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="https://github.com/yixin0724">GitHub <span aria-hidden="true">↗</span></a>
+      </nav>
     </header>
 
-    <section>
-      <h2>关于我</h2>
-      <p>
-        我是长沙理工大学软件工程硕士生，目前在国防科技大学联合培养，
-        预计于 2027 年毕业。
-      </p>
-      <p>
-        我的研究方向是基于深度强化学习的工作流调度。
-        同时，我也从事 AI Agent 应用开发，关注从大语言模型编排到后端服务的工程实践。
-      </p>
-      <p>
-        我主要使用 Python 和 Java，重视研究实验的可复现性，
-        也喜欢将想法实现为可以实际使用的软件。
-      </p>
-    </section>
+    <main id="main">
+      <section class="hero" aria-labelledby="intro-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Research · Tools · Learning</p>
+          <h1 id="intro-title">Hi, I’m Jayce.</h1>
+          <p class="hero-lead">I study workflow scheduling with deep reinforcement learning and build tools for reproducible research.</p>
+          <p class="hero-secondary">I also explore AI agent applications, from language model orchestration to backend services.</p>
+          <p class="affiliation">M.S. student in Software Engineering <span aria-hidden="true">·</span> Changsha, China</p>
+          <div class="hero-actions">
+            <a class="button" href="#projects">Explore my work <span aria-hidden="true">↓</span></a>
+            <a class="text-link" href="#about">A little about me <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
 
-    <section>
-      <h2>项目</h2>
-      <p>
-        <a href="https://github.com/yixin0724/workflowsim-research">
-          <strong>workflowsim-research</strong>
-        </a>
-      </p>
-      <p>
-        面向科学工作流调度研究的离散事件仿真项目，基于 WorkflowSim / CloudSim，
-        关注调度算法实验、实验过程记录与结果的可复现性。
-      </p>
-    </section>
+        <aside class="workflow-sketch" aria-labelledby="workflow-sketch-title">
+          <p class="eyebrow" id="workflow-sketch-title">Inside my current work</p>
+          <ol class="sketch-steps">
+            <li>
+              <span class="step-dot" aria-hidden="true"></span>
+              <span class="step-label">Describe</span>
+              <h2>Workflow + configuration</h2>
+              <p>Tasks, dependencies, and resources.</p>
+            </li>
+            <li>
+              <span class="step-dot" aria-hidden="true"></span>
+              <span class="step-label">Explore</span>
+              <h2>Simulation</h2>
+              <p>Scheduling decisions and data movement.</p>
+            </li>
+            <li>
+              <span class="step-dot" aria-hidden="true"></span>
+              <span class="step-label">Examine</span>
+              <h2>Evidence + report</h2>
+              <p>Results that can be inspected and replayed.</p>
+            </li>
+          </ol>
+          <a class="sketch-link" href="workflowsim-research.html">Meet the project <span aria-hidden="true">↗</span></a>
+        </aside>
+      </section>
 
-    <section>
-      <h2>联系我</h2>
-      <p>
-        GitHub：
-        <a href="https://github.com/yixin0724">github.com/yixin0724</a>
-      </p>
-      <p>
-        邮箱：
-        <a href="mailto:jaycelove0724@gmail.com">jaycelove0724@gmail.com</a>
-      </p>
-    </section>
-  </main>
+      <section class="content-section" id="research" aria-labelledby="research-title">
+        <div class="section-heading">
+          <h2 id="research-title">Research &amp; interests</h2>
+          <p>The questions behind the work.</p>
+        </div>
+        <div class="interest-grid">
+          <article class="interest">
+            <p class="eyebrow">Scheduling &amp; learning</p>
+            <h3>Making decisions<br>with dependencies.</h3>
+            <p>How should dependent tasks be assigned and ordered when computation and data movement share limited resources? My research focuses on deep reinforcement learning for workflow scheduling.</p>
+          </article>
+          <article class="interest">
+            <p class="eyebrow">Agents &amp; applications</p>
+            <h3>Turning model capabilities<br>into useful tools.</h3>
+            <p>I explore how language models, tools, and backend services can work together in AI agent applications, with an interest in the engineering decisions that make these systems usable.</p>
+          </article>
+        </div>
+        <p class="research-note">Across both areas, I care about explicit assumptions, useful implementations, and experiments that can be inspected and reproduced.</p>
+      </section>
 
-  <footer>Jayce · Changsha, China</footer>
+      <section class="content-section" id="projects" aria-labelledby="projects-title">
+        <div class="section-heading">
+          <h2 id="projects-title">Selected project</h2>
+          <p>A closer look at what I’m building.</p>
+        </div>
+        <article class="featured-project" aria-labelledby="featured-title">
+          <div class="project-copy">
+            <p class="eyebrow">Research software · Java</p>
+            <h3 id="featured-title"><a href="workflowsim-research.html">workflowsim-research</a></h3>
+            <p>A discrete-event simulation environment for scientific workflow scheduling. It brings workflow models, experiment configuration, and replayable evidence into a single research workflow.</p>
+            <div class="project-actions">
+              <a class="text-link" href="workflowsim-research.html">Read the project <span aria-hidden="true">→</span></a>
+              <a class="quiet-link" href="https://github.com/yixin0724/workflowsim-research">Source on GitHub <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+          <dl class="project-highlights">
+            <div><dt>Model</dt><dd>Workflows, compute, and data</dd></div>
+            <div><dt>Experiment</dt><dd>Explicit setup and validation</dd></div>
+            <div><dt>Inspect</dt><dd>Reports, traces, and replay</dd></div>
+          </dl>
+        </article>
+      </section>
+
+      <section class="content-section about-section" id="about" aria-labelledby="about-title">
+        <div class="section-heading">
+          <h2 id="about-title">A little about me</h2>
+          <p>Based in Changsha, China.</p>
+        </div>
+        <div class="about-grid">
+          <div class="about-copy">
+            <p>I’m a software engineering master’s student at <strong>Changsha University of Science and Technology</strong>, jointly trained at the <strong>National University of Defense Technology</strong>. I expect to graduate in 2027.</p>
+            <p>I mainly work with Python and Java. I enjoy turning research questions into experiments and ideas into software that people can use.</p>
+          </div>
+          <aside class="contact" aria-label="Contact Jayce">
+            <p class="eyebrow">Get in touch</p>
+            <a class="contact-link" href="mailto:jaycelove0724@gmail.com">jaycelove0724@gmail.com <span aria-hidden="true">↗</span></a>
+            <a class="contact-link" href="https://github.com/yixin0724">github.com/yixin0724 <span aria-hidden="true">↗</span></a>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Jayce <span aria-hidden="true">·</span> Research, tools, and ideas.</p>
+      <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
+    </footer>
+  </div>
 </body>
 </html>

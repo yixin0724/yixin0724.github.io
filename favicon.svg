@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>Jayce</title>
+  <rect width="64" height="64" rx="14" fill="#18304a"/>
+  <path d="M22 18h22M36 18v25c0 7-4 10-10 10s-10-4-10-10" fill="none" stroke="#f7f9fc" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="48" cy="47" r="4" fill="#79c3d5"/>
+</svg>
